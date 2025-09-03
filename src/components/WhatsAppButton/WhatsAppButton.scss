@@ -18,9 +18,9 @@
   justify-content: center;
   overflow: hidden;
 
-  // Efeito de brilho no hover
+  
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
@@ -48,9 +48,9 @@
     transform: scale(0.95);
   }
 
-  // Animação de pulso
+  
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -61,7 +61,7 @@
     animation: pulse 2s infinite;
   }
 
-  // Responsivo para mobile
+  
   @include mobile {
     bottom: 1.5rem;
     right: 1.5rem;
@@ -70,7 +70,7 @@
   }
 }
 
-// Keyframes para animação de pulso
+
 @keyframes pulse {
   0% {
     transform: scale(1);

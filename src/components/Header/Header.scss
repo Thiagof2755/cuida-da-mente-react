@@ -190,7 +190,7 @@
         color: $color-white;
         
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           top: 0;
@@ -313,7 +313,7 @@
   }
 }
 
-// Hamburger moderno animado
+
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -362,7 +362,7 @@
   }
 }
 
-// Responsividade aprimorada
+
 @media (max-width: 1024px) {
   .header {
     &__nav-list {
@@ -428,7 +428,7 @@
   }
 }
 
-// Melhorias para acessibilidade e performance
+
 @media (prefers-reduced-motion: reduce) {
   .header {
     &__nav,
@@ -440,7 +440,7 @@
   }
 }
 
-// Ajustes para dispositivos touch
+
 @media (hover: none) and (pointer: coarse) {
   .header {
     &__nav-link:hover,

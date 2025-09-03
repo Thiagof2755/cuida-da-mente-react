@@ -5,9 +5,9 @@
   position: relative;
   overflow: hidden;
   
-  // Elementos de fundo decorativos
+  
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -83,9 +83,9 @@
     transform: translateY(0);
 
 
-    // Gradiente de borda animado
+    
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -99,7 +99,7 @@
       transition: all 0.5s ease;
     }
 
-    // Card 1 - Rosa pastel
+    
     &:nth-child(1) {
       &::before {
         background: linear-gradient(135deg, rgba(236, 75, 145, 0.6), rgba(240, 98, 146, 0.6));
@@ -115,7 +115,7 @@
       }
     }
 
-    // Card 2 - Amarelo pastel
+    
     &:nth-child(2) {
       &::before {
         background: linear-gradient(135deg, rgba(247, 224, 76, 0.6), rgba(255, 235, 59, 0.6));
@@ -131,7 +131,7 @@
       }
     }
 
-    // Card 3 - Verde pastel
+    
     &:nth-child(3) {
       &::before {
         background: linear-gradient(135deg, rgba(47, 168, 101, 0.6), rgba(76, 175, 80, 0.6));
@@ -200,7 +200,7 @@
     position: relative;
     
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -6px;
       left: 50%;
@@ -290,9 +290,9 @@
     border: 2px solid rgba(27, 170, 191, 0.3);
     overflow: hidden;
 
-    // Elementos de fundo decorativos
+    
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -353,9 +353,9 @@
     position: relative;
     overflow: hidden;
 
-    // Borda de destaque com gradiente
+    
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -379,7 +379,7 @@
       }
     }
 
-    // Card 1 - Verde azulado
+    
     &:nth-child(1) {
       border-color: rgba(27, 170, 191, 0.3);
       
@@ -393,7 +393,7 @@
       }
     }
 
-    // Card 2 - Verde
+    
     &:nth-child(2) {
       border-color: rgba(47, 168, 101, 0.3);
       
@@ -449,7 +449,7 @@
     overflow: hidden;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -50%;
       left: -50%;
@@ -508,7 +508,7 @@
   }
 }
 
-// Animações
+
 @keyframes cta-glow {
   0%, 100% {
     transform: translate(0, 0) rotate(0deg);
@@ -520,7 +520,7 @@
   }
 }
 
-// Animações de entrada dos cards
+
 .services__card {
   animation: card-enter 0.8s ease-out both;
   
