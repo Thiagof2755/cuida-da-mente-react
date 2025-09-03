@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Cuida da Mente",
+  "name": "Cuida da Mente - Psicologia e Neuropsicologia",
+  "description": "Clínica especializada em psicologia e neuropsicologia para crianças, adolescentes e adultos",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#03383A",
+  "background_color": "#ffffff",
+  "categories": ["medical", "health", "education"],
+  "lang": "pt-BR"
 }

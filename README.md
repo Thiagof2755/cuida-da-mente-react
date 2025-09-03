@@ -1,46 +1,166 @@
-# Getting Started with Create React App
+# Cuida da Mente - Site Institucional
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site institucional da clínica **Cuida da Mente**, especializada em Psicologia e Neuropsicologia para crianças, adolescentes e adultos.
 
-## Available Scripts
+## 🏥 Sobre a Clínica
 
-In the project directory, you can run:
+A **Cuida da Mente** é uma clínica de Psicologia e Neuropsicologia localizada em São Paulo, com foco em:
 
-### `npm start`
+- **Avaliações neuropsicológicas** (TEA, TDAH, Ansiedade, Dificuldades de Aprendizagem)
+- **Psicoterapia individual** (presencial e online)
+- **Orientação para pais e cuidadores**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Psicóloga Responsável
+**Drª Ivanice Barros**
+- Graduação em Psicologia pela UNISA
+- Pós-graduação em Neuropsicologia pelo Centro de Estudos de Neurologia do HC-USP
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Tecnologias Utilizadas
 
-### `npm test`
+- **React 19** com TypeScript
+- **SASS/SCSS** para estilização
+- **CSS Modules** para organização de estilos
+- **Responsive Design** (mobile-first)
+- **SEO otimizado** com meta tags e schema markup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎨 Design System
 
-### `npm run build`
+### Paleta de Cores
+- **Primária**: Deep Teal (#03383A)
+- **Secundária**: Blue/Teal (#0F6B82)
+- **Acentos**: Pink (#FF5EA8) e Cyan (#25C2B8)
+- **Neutros**: Branco (#FFFFFF), Cinzas (#6B7A7B / #E9EFEF)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tipografia
+- **Fonte**: Inter (Google Fonts)
+- **Pesos**: 300, 400, 500, 600, 700
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📱 Funcionalidades
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Seções do Site
+1. **Home** - Mensagem de boas-vindas e CTA para WhatsApp
+2. **Sobre** - Informações sobre a psicóloga e formação
+3. **Serviços** - Lista detalhada de atendimentos
+4. **Metodologia** - Fluxo de atendimento e FAQ
+5. **Contato** - Formulário e informações de contato
 
-### `npm run eject`
+### Recursos Técnicos
+- **Header fixo** com navegação responsiva
+- **Botão flutuante** de WhatsApp sempre visível
+- **Animações suaves** (fade, slide, scroll-in)
+- **Formulário de contato** funcional
+- **FAQ interativo** com accordion
+- **Scroll suave** entre seções
+- **Acessibilidade** com ARIA labels e contraste AA
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🛠️ Instalação e Execução
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pré-requisitos
+- Node.js 18+ 
+- npm ou yarn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Passos para instalação
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Clone o repositório**
+```bash
+git clone https://github.com/seu-usuario/cuida-da-mente.git
+cd cuida-da-mente
+```
 
-## Learn More
+2. **Instale as dependências**
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Execute em modo desenvolvimento**
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Abra no navegador**
+```
+http://localhost:3000
+```
+
+### Scripts disponíveis
+
+- `npm start` - Executa em modo desenvolvimento
+- `npm run build` - Cria build de produção
+- `npm test` - Executa testes
+- `npm run eject` - Ejecta configurações (irreversível)
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/          # Componentes React
+│   ├── Header/         # Cabeçalho fixo
+│   ├── Hero/           # Seção inicial
+│   ├── About/          # Sobre a psicóloga
+│   ├── Services/       # Serviços oferecidos
+│   ├── Methodology/    # Metodologia e FAQ
+│   ├── Contact/        # Formulário de contato
+│   ├── Footer/         # Rodapé
+│   └── WhatsAppButton/ # Botão flutuante
+├── styles/             # Estilos globais SASS
+├── types/              # Tipos TypeScript
+├── utils/              # Dados estáticos e utilitários
+└── App.tsx             # Componente principal
+```
+
+## 🔧 Configurações
+
+### SEO
+- Meta tags otimizadas
+- Open Graph para redes sociais
+- Schema markup para negócio local
+- Sitemap XML
+- Robots.txt
+
+### Acessibilidade
+- Contraste AA
+- ARIA labels
+- Navegação por teclado
+- Textos alternativos
+
+### Performance
+- Lazy loading de componentes
+- Otimização de imagens
+- Minificação de CSS/JS
+- Compressão gzip
+
+## 📱 Responsividade
+
+O site é totalmente responsivo com breakpoints:
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px  
+- **Desktop**: > 1024px
+
+## 🌐 Deploy
+
+### Build de Produção
+```bash
+npm run build
+```
+
+### Hospedagem Recomendada
+- **Vercel** (recomendado para React)
+- **Netlify**
+- **GitHub Pages**
+- **AWS S3 + CloudFront**
+
+## 📞 Contato
+
+**Clínica Cuida da Mente**
+- **Endereço**: Rua Antonio Salvia, 30 - São Paulo, SP
+- **Telefone/WhatsApp**: (11) 98210-9964
+- **E-mail**: contato@cuidadamente.com.br
+- **Horários**: Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h
+
+## 📄 Licença
+
+Este projeto é propriedade da Clínica Cuida da Mente. Todos os direitos reservados.
+
+---
+
+**Desenvolvido com ❤️ para cuidar da saúde mental das famílias brasileiras.**

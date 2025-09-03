@@ -1,0 +1,482 @@
+
+$color-primary: #03383A;      
+$color-secondary: #0F6B82;    
+$color-accent-pink: #FF5EA8;  
+$color-accent-cyan: #25C2B8;  
+$color-white: #FFFFFF;        
+$color-gray-dark: #6B7A7B;    
+$color-gray-light: #E9EFEF;
+
+
+@import './scrollReveal.scss';   
+
+
+$font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-small-mobile: 480px;
+
+
+$spacing-xs: 0.5rem;    
+$spacing-sm: 1rem;      
+$spacing-md: 1.5rem;    
+$spacing-lg: 2rem;      
+$spacing-xl: 3rem;      
+$spacing-2xl: 4rem;     
+$spacing-3xl: 6rem;     
+
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media (max-width: #{$breakpoint-small-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-mobile + 1px}) and (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-tablet + 1px}) {
+    @content;
+  }
+}
+
+@mixin section-padding {
+  padding: $spacing-3xl $spacing-2xl;
+  
+  @include mobile {
+    padding: $spacing-xl $spacing-sm;
+  }
+  
+  @include small-mobile {
+    padding: $spacing-lg $spacing-xs;
+  }
+  
+  @include desktop {
+    padding: $spacing-3xl $spacing-2xl;
+  }
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 20px rgba(3, 56, 58, 0.08);
+  transition: box-shadow 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 8px 30px rgba(3, 56, 58, 0.12);
+  }
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md $spacing-lg;
+  border: none;
+  border-radius: 12px;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-medium;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-height: 48px;
+  letter-spacing: 0.025em;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  color: $color-primary;
+  background-color: $color-white;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-semibold;
+  line-height: 1.2;
+  margin-bottom: $spacing-md;
+  letter-spacing: -0.02em;
+  color: $color-primary;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.1;
+  
+  @include mobile {
+    font-size: 2.5rem;
+  }
+  
+  @include desktop {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: $font-weight-semibold;
+  
+  @include mobile {
+    font-size: 2rem;
+  }
+  
+  @include desktop {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: $font-weight-semibold;
+  
+  @include mobile {
+    font-size: 1.5rem;
+  }
+  
+  @include desktop {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-sm;
+}
+
+p {
+  margin-bottom: $spacing-md;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  
+  @include desktop {
+    font-size: 1.125rem;
+  }
+}
+
+
+.btn {
+  @include button-base;
+  
+  &--primary {
+    @extend .btn;
+    background: $color-primary;
+    color: $color-white;
+    
+    &:hover {
+      background: darken($color-primary, 8%);
+      box-shadow: 0 8px 25px rgba(3, 56, 58, 0.25);
+    }
+  }
+  
+  &--secondary {
+    @extend .btn;
+    background: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    
+    &:hover {
+      background: $color-primary;
+      color: $color-white;
+      box-shadow: 0 8px 25px rgba(3, 56, 58, 0.15);
+    }
+  }
+  
+  &--accent {
+    @extend .btn;
+    background: $color-accent-pink;
+    color: $color-white;
+    
+    &:hover {
+      background: darken($color-accent-pink, 8%);
+      box-shadow: 0 8px 25px rgba(255, 94, 168, 0.25);
+    }
+  }
+  
+  &--whatsapp {
+    @extend .btn;
+    background: #25D366;
+    color: $color-white;
+    
+    &:hover {
+      background: darken(#25D366, 8%);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
+    }
+  }
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+  
+  @include mobile {
+    padding: 0 $spacing-sm;
+  }
+  
+  @include small-mobile {
+    padding: 0 $spacing-xs;
+  }
+}
+
+.section {
+  @include section-padding;
+  
+  &--full-height {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  &--centered {
+    text-align: center;
+  }
+  
+  &--alternate {
+    background: $color-gray-light;
+  }
+}
+
+
+.card {
+  background: $color-white;
+  border-radius: 16px;
+  padding: $spacing-2xl;
+  @include card-shadow;
+  border: 1px solid rgba($color-primary, 0.08);
+  
+  @include mobile {
+    padding: $spacing-lg;
+  }
+}
+
+
+.grid {
+  display: grid;
+  gap: $spacing-2xl;
+  
+  &--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate {
+  &--fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  &--fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  &--slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+  }
+  
+  &--slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+}
+
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-1 { margin-bottom: $spacing-xs; }
+.mb-2 { margin-bottom: $spacing-sm; }
+.mb-3 { margin-bottom: $spacing-md; }
+.mb-4 { margin-bottom: $spacing-lg; }
+.mb-5 { margin-bottom: $spacing-xl; }
+
+.mt-1 { margin-top: $spacing-xs; }
+.mt-2 { margin-top: $spacing-sm; }
+.mt-3 { margin-top: $spacing-md; }
+.mt-4 { margin-top: $spacing-lg; }
+.mt-5 { margin-top: $spacing-xl; }
+
+.p-1 { padding: $spacing-xs; }
+.p-2 { padding: $spacing-sm; }
+.p-3 { padding: $spacing-md; }
+.p-4 { padding: $spacing-lg; }
+.p-5 { padding: $spacing-xl; }
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+*:focus {
+  outline: 2px solid $color-accent-cyan;
+  outline-offset: 2px;
+}
+
+
+a {
+  color: $color-accent-cyan;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: darken($color-accent-cyan, 15%);
+    text-decoration: underline;
+  }
+}
+
+
+.divider {
+  height: 1px;
+  background: $color-gray-light;
+  margin: $spacing-2xl 0;
+  border: none;
+}
+
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  
+  &--small {
+    width: 20px;
+    height: 20px;
+  }
+  
+  &--large {
+    width: 32px;
+    height: 32px;
+  }
+  
+  &--accent {
+    color: $color-accent-cyan;
+  }
+  
+  &--primary {
+    color: $color-primary;
+  }
+}

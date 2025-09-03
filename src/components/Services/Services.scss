@@ -1,0 +1,541 @@
+@import '../../styles/globals.scss';
+
+.services {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  
+  // Elementos de fundo decorativos
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(236, 75, 145, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(47, 168, 101, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(27, 170, 191, 0.02) 0%, transparent 50%);
+    z-index: 0;
+  }
+
+  &__header {
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__title {
+    color: $color-primary;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    background: linear-gradient(135deg, #03383A, #0F6B82);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__subtitle {
+    color: $color-gray-dark;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  &__grid {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      padding: 0.6rem;
+    }
+  }
+
+  &__card {
+    flex: 1;
+    min-width: 260px;
+    max-width: 320px;
+    background: $color-white;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: 
+      0 15px 30px rgba(0, 0, 0, 0.06),
+      0 5px 15px rgba(0, 0, 0, 0.04);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+
+
+    // Gradiente de borda animado
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 20px;
+      padding: 2px;
+      background: linear-gradient(135deg, transparent, transparent);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      transition: all 0.5s ease;
+    }
+
+    // Card 1 - Rosa pastel
+    &:nth-child(1) {
+      &::before {
+        background: linear-gradient(135deg, rgba(236, 75, 145, 0.6), rgba(240, 98, 146, 0.6));
+      }
+      
+      .services__card-icon {
+        background: linear-gradient(135deg, rgba(236, 75, 145, 0.8), rgba(240, 98, 146, 0.8));
+        color: white;
+      }
+      
+      .services__card-accent {
+        background: linear-gradient(135deg, rgba(236, 75, 145, 0.7), rgba(240, 98, 146, 0.7));
+      }
+    }
+
+    // Card 2 - Amarelo pastel
+    &:nth-child(2) {
+      &::before {
+        background: linear-gradient(135deg, rgba(247, 224, 76, 0.6), rgba(255, 235, 59, 0.6));
+      }
+      
+      .services__card-icon {
+        background: linear-gradient(135deg, rgba(247, 224, 76, 0.8), rgba(255, 235, 59, 0.8));
+        color: #555;
+      }
+      
+      .services__card-accent {
+        background: linear-gradient(135deg, rgba(247, 224, 76, 0.7), rgba(255, 235, 59, 0.7));
+      }
+    }
+
+    // Card 3 - Verde pastel
+    &:nth-child(3) {
+      &::before {
+        background: linear-gradient(135deg, rgba(47, 168, 101, 0.6), rgba(76, 175, 80, 0.6));
+      }
+      
+      .services__card-icon {
+        background: linear-gradient(135deg, rgba(47, 168, 101, 0.8), rgba(76, 175, 80, 0.8));
+        color: white;
+      }
+      
+      .services__card-accent {
+        background: linear-gradient(135deg, rgba(47, 168, 101, 0.7), rgba(76, 175, 80, 0.7));
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.06);
+      
+      &::before {
+        transform: scale(1.03);
+      }
+      
+      .services__card-icon {
+        transform: scale(1.05) rotate(3deg);
+      }
+      
+      .services__card-accent {
+        transform: scaleX(1.15);
+      }
+    }
+
+    @include mobile {
+      padding: 1.5rem 2rem;
+      min-width: auto;
+      max-width: none;
+    }
+  }
+
+  &__card-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  &__card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &__card-title {
+    color: $color-primary;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: $font-weight-bold;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, currentColor, transparent);
+      border-radius: 1px;
+    }
+  }
+
+  &__card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    transform-origin: left;
+  }
+
+  &__card-description {
+    color: $color-gray-dark;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  &__card-details {
+    h4 {
+      color: $color-primary;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      text-align: center;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  &__card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__card-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: $color-gray-dark;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0.4rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba($color-primary, 0.04);
+      transform: translateX(3px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card-check {
+    color: rgba(47, 168, 101, 0.8);
+    font-weight: $font-weight-bold;
+    font-size: 1rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    background: linear-gradient(135deg, #0F6B82 0%, #03383A 100%);
+    border-radius: 20px;
+    padding: 2rem 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 
+      0 20px 40px rgba(15, 107, 130, 0.3),
+      0 8px 16px rgba(3, 56, 58, 0.2);
+    position: relative;
+    z-index: 1;
+    border: 2px solid rgba(27, 170, 191, 0.3);
+    overflow: hidden;
+
+    // Elementos de fundo decorativos
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(27, 170, 191, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(47, 168, 101, 0.08) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    @include mobile {
+      padding: 1.5rem 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__info-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    h3 {
+      color: $color-white;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: $font-weight-bold;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__modalities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  &__modality {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+    border-radius: 16px;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(27, 170, 191, 0.2);
+    box-shadow: 
+      0 8px 20px rgba(0, 0, 0, 0.1),
+      0 4px 10px rgba(15, 107, 130, 0.2);
+    position: relative;
+    overflow: hidden;
+
+    // Borda de destaque com gradiente
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #1BAABF, #2FA865, #1BAABF);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.15),
+        0 8px 20px rgba(15, 107, 130, 0.3);
+      border-color: rgba(27, 170, 191, 0.4);
+      
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+
+    // Card 1 - Verde azulado
+    &:nth-child(1) {
+      border-color: rgba(27, 170, 191, 0.3);
+      
+      &::before {
+        background: linear-gradient(90deg, #1BAABF, #2FA865);
+      }
+      
+      .services__modality-icon {
+        color: #1BAABF;
+        background: linear-gradient(135deg, rgba(27, 170, 191, 0.1), rgba(47, 168, 101, 0.1));
+      }
+    }
+
+    // Card 2 - Verde
+    &:nth-child(2) {
+      border-color: rgba(47, 168, 101, 0.3);
+      
+      &::before {
+        background: linear-gradient(90deg, #2FA865, #1BAABF);
+      }
+      
+      .services__modality-icon {
+        color: #2FA865;
+        background: linear-gradient(135deg, rgba(47, 168, 101, 0.1), rgba(27, 170, 191, 0.1));
+      }
+    }
+  }
+
+  &__modality-icon {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.25rem;
+  }
+
+  &__modality strong {
+    display: block;
+    color: #03383A;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: $font-weight-semibold;
+  }
+
+  &__modality p {
+    color: #0F6B82;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  &__cta {
+    background: linear-gradient(135deg, #1BAABF, #2FA865);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    color: $color-white;
+    margin: 0 -2rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: cta-glow 8s ease-in-out infinite;
+    }
+
+    @include mobile {
+      margin: 0 -1rem;
+      padding: 2rem 1.5rem;
+    }
+
+    h3 {
+      color: $color-white;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: $font-weight-bold;
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__cta-button {
+    background: $color-white;
+    color: #1BAABF;
+    border: 2px solid $color-white;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: $font-weight-semibold;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: transparent;
+      color: $color-white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__cta-icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+// Animações
+@keyframes cta-glow {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(20px, -20px) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+// Animações de entrada dos cards
+.services__card {
+  animation: card-enter 0.8s ease-out both;
+  
+  &:nth-child(1) { animation-delay: 0.1s; }
+  &:nth-child(2) { animation-delay: 0.3s; }
+  &:nth-child(3) { animation-delay: 0.5s; }
+}
+
+@keyframes card-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

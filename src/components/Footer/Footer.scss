@@ -1,0 +1,190 @@
+@import '../../styles/globals.scss';
+
+.footer {
+  background: $color-primary;
+  color: $color-white;
+  padding: 4rem 0 2rem;
+
+  @include mobile {
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__brand {
+    .footer__logo {
+      color: $color-white;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: $font-weight-bold;
+
+    }
+
+    .footer__tagline {
+      color: $color-accent-cyan;
+      font-weight: $font-weight-medium;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+
+    }
+
+    .footer__description {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+  }
+
+  &__contact,
+  &__services,
+  &__formation {
+    h4 {
+      color: $color-white;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  &__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contact-icon {
+    font-size: 1.2rem;
+    width: 1.5rem;
+    text-align: center;
+    margin-top: 0.1rem;
+    color: $color-accent-cyan;
+  }
+
+  &__contact-item p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  &__services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__services-list li {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '•';
+      color: $color-accent-cyan;
+      position: absolute;
+      left: 0;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__formation-item {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      display: block;
+      color: $color-accent-cyan;
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    @include mobile {
+      justify-content: center;
+      gap: 1.5rem;
+    }
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+
+    &:hover {
+      color: $color-accent-cyan;
+    }
+  }
+}
