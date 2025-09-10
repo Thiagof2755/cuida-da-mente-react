@@ -56,7 +56,7 @@ A **Cuida da Mente** é uma clínica de Psicologia e Neuropsicologia localizada 
 ## 🛠️ Instalação e Execução
 
 ### Pré-requisitos
-- Node.js 18+ 
+- Node.js 19+ 
 - npm ou yarn
 
 ### Passos para instalação
@@ -153,9 +153,9 @@ npm run build
 
 **Clínica Cuida da Mente**
 - **Endereço**: Rua Antonio Salvia, 30 - São Paulo, SP
-- **Telefone/WhatsApp**: (11) 98210-9964
+- **Telefone/WhatsApp**: (11) 96548-6611
 - **E-mail**: contato@cuidadamente.com.br
-- **Horários**: Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h
+- **Horários**: Segunda a Sexta: 8h às 19h | Sábado: 8h às 13h
 
 ## 📄 Licença
 

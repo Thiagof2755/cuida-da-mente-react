@@ -12,37 +12,26 @@ export const services: Service[] = [
     {
         id: 'neuropsychological',
         title: 'Avaliação Neuropsicológica',
-        description: 'Avaliações completas para diagnóstico de TEA, TDAH, ansiedade e dificuldades de aprendizagem',
+        description: 'Investigação de funções cognitivas (atenção, memória, linguagem, funções executivas e comportamento) com identificação ou refutação de transtornos e potencialização de áreas preservadas.',
         icon: '🧠',
         details: [
-            'Testes padronizados e validados',
-            'Entrevistas com pais e cuidadores',
-            'Relatório detalhado com recomendações',
-            'Encaminhamento para outros especialistas quando necessário'
+            'Triagem inicial',
+            'Entrevistas ampliadas com pais ou cuidadores',
+            'Testagens padronizadas',
+            'Laudos e recomendações',
+            'Devolutiva e entrega dos exames'
         ]
     },
     {
         id: 'psychotherapy',
         title: 'Psicoterapia Individual',
-        description: 'Atendimento personalizado para crianças, adolescentes e adultos',
+        description: 'Apoio emocional para lidar com dificuldades escolares, relacionamento, autoestima e outros',
         icon: '💙',
         details: [
-            'Modalidade presencial e online',
+            'Modalidade presencial e online (a depender da idade e necessidade)',
             'Abordagem baseada em evidências',
             'Acompanhamento contínuo',
-            'Orientação para pais e cuidadores'
-        ]
-    },
-    {
-        id: 'guidance',
-        title: 'Orientação para Pais',
-        description: 'Suporte especializado para cuidadores e familiares',
-        icon: '👨‍👩‍👧‍👦',
-        details: [
-            'Identificação de sinais comportamentais',
-            'Estratégias práticas para o dia a dia',
-            'Comunicação com a escola',
-            'Acompanhamento do desenvolvimento'
+            'Orientação para pais, cuidadores e/ou educadores'
         ]
     }
 ];
@@ -51,7 +40,12 @@ export const faqItems: FAQItem[] = [
     {
         id: 'duration',
         question: 'Quanto tempo dura uma avaliação neuropsicológica?',
-        answer: 'Uma avaliação completa pode levar de 4 a 6 sessões, dependendo da complexidade do caso e da idade do paciente.'
+        answer: 'Uma avaliação completa pode levar de de 8 a 12 sessões, dependendo da complexidade do caso.  '
+    },
+    {
+        id: 'duratio',
+        question: 'Quanto tempo dura uma sessão terapêutica? ',
+        answer: 'Cada sessão dura aproximadamente 50 minutos. '
     },
     {
         id: 'online',
@@ -61,7 +55,7 @@ export const faqItems: FAQItem[] = [
     {
         id: 'confidentiality',
         question: 'Como é garantido o sigilo profissional?',
-        answer: 'O sigilo é garantido pelo Código de Ética Profissional do Psicólogo. As informações são confidenciais, exceto em situações específicas previstas em lei.'
+        answer: 'O sigilo é garantido pelo Código de Ética Profissional do Psicólogo. As informações são confidenciais, exceto em situações específicas previstas pela legislação brasileira. ',
     },
     {
         id: 'first-session',
@@ -71,18 +65,18 @@ export const faqItems: FAQItem[] = [
     {
         id: 'insurance',
         question: 'Aceitam convênios médicos?',
-        answer: 'Atualmente atendemos particular e alguns convênios. Entre em contato para verificar a cobertura do seu plano.'
+        answer: 'O atendimento é particular, mas os clientes podem buscar reembolso com seus planos de saúde apresentado as notas fiscais. '
     }
 ];
 
 export const clinicInfo = {
     name: 'Cuida da Mente',
-    psychologist: 'Drª Ivanice Barros',
+    psychologist: 'Ivanice Barros',
     address: 'Rua Antonio Salvia, 30 - São Paulo, SP',
-    phone: '(11) 98210-9964',
-    whatsapp: '11982109964',
+    phone: '(11) 96548-6611',
+    whatsapp: '11965486611',
     email: 'contato@cuidadamente.com.br',
-    hours: 'Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h',
+    hours: 'Segunda a Sexta: 8h às 19h | Sábado: 8h às 13h',
     formation: {
         graduation: 'Psicologia - UNISA',
         specialization: 'Neuropsicologia - Centro de Estudos de Neurologia do HC-USP'

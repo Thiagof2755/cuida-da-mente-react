@@ -1,3 +1,4 @@
+// Contact.tsx
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import Lottie from 'lottie-react';
@@ -6,24 +7,26 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 import StressAnimation from '../../assets/JsonAnimate/Stress.json';
 import './Contact.scss';
 
+
 const Contact: React.FC = () => {
-  const { ref: headerRef, animationClass: headerClass } = useScrollReveal({ 
-    animation: 'fadeInUp', 
+  const { ref: headerRef, animationClass: headerClass } = useScrollReveal({
+    animation: 'fadeInUp',
     duration: 'normal',
     easing: 'bounce'
   });
-  
-  const { ref: animationRef, animationClass: animationClass } = useScrollReveal({ 
-    animation: 'slideInLeft', 
+
+  const { ref: animationRef, animationClass: animationClass } = useScrollReveal({
+    animation: 'slideInLeft',
     duration: 'normal',
     easing: 'elastic'
   });
-  
-  const { ref: infoRef, animationClass: infoClass } = useScrollReveal({ 
-    animation: 'slideInRight', 
+
+  const { ref: infoRef, animationClass: infoClass } = useScrollReveal({
+    animation: 'slideInRight',
     duration: 'normal',
     easing: 'elastic'
   });
+
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
@@ -34,6 +37,7 @@ const Contact: React.FC = () => {
       '_blank'
     );
   };
+
 
   return (
     <section id="contact" className="contact section">
@@ -50,19 +54,11 @@ const Contact: React.FC = () => {
         <div className="contact__content">
           <div ref={animationRef} className={`contact__animation-container ${animationClass}`}>
             <div className="contact__animation">
-              <p>Transforme sua mente, cultive sua paz interior</p>
-              <div className="contact__lottie-container">
-                <Lottie 
-                  animationData={StressAnimation} 
-                  loop={true}
-                  autoplay={true}
-                  style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
-                />
-              </div>
+              {/* Bloco de agendamento via WhatsApp movido para o topo */}
               <div className="contact__whatsapp">
                 <h4>Agende via WhatsApp</h4>
                 <p>Resposta rápida e agendamento facilitado</p>
-                <button 
+                <button
                   className="btn btn--whatsapp contact__whatsapp-button"
                   onClick={handleWhatsAppClick}
                 >
@@ -70,12 +66,20 @@ const Contact: React.FC = () => {
                   Falar no WhatsApp
                 </button>
               </div>
+              <p>Cultive seu bem-estar mental</p>
+              <div className="contact__lottie-container">
+                <Lottie
+                  animationData={StressAnimation}
+                  loop={true}
+                  autoplay={true}
+                  style={{ width: '60%', height: 'auto', maxWidth: '500px' }}
+                />
+              </div>
             </div>
           </div>
 
           <div ref={infoRef} className={`contact__info ${infoClass}`}>
-            <h3>Informações de Contato</h3>
-            
+
             <div className="contact__info-items">
               <div className="contact__info-item">
                 <MapPin className="contact__info-icon" />
@@ -84,7 +88,7 @@ const Contact: React.FC = () => {
                   <p>{clinicInfo.address}</p>
                 </div>
               </div>
-              
+
               <div className="contact__info-item">
                 <Phone className="contact__info-icon" />
                 <div>
@@ -92,7 +96,7 @@ const Contact: React.FC = () => {
                   <p>{clinicInfo.phone}</p>
                 </div>
               </div>
-              
+
               <div className="contact__info-item">
                 <Mail className="contact__info-icon" />
                 <div>
@@ -100,7 +104,7 @@ const Contact: React.FC = () => {
                   <p>{clinicInfo.email}</p>
                 </div>
               </div>
-              
+
               <div className="contact__info-item">
                 <Clock className="contact__info-icon" />
                 <div>
@@ -115,5 +119,6 @@ const Contact: React.FC = () => {
     </section>
   );
 };
+
 
 export default Contact;

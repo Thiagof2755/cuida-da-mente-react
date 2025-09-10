@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Heart, Users, Building2, Monitor, MessageCircle, Check } from 'lucide-react';
+import { Brain, Heart, Check } from 'lucide-react';
 import { services, clinicInfo } from '../../utils/data';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Services.scss';
@@ -17,11 +17,6 @@ const Services: React.FC = () => {
     easing: 'elastic'
   });
   
-  const { ref: infoRef, animationClass: infoClass } = useScrollReveal({ 
-    animation: 'slideInUp', 
-    duration: 'normal',
-    easing: 'default'
-  });
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
@@ -57,7 +52,6 @@ const Services: React.FC = () => {
                 <div className="services__card-icon">
                   {service.id === 'neuropsychological' && <Brain />}
                   {service.id === 'psychotherapy' && <Heart />}
-                  {service.id === 'guidance' && <Users />}
                 </div>
                 <h3 className="services__card-title">{service.title}</h3>
               </div>
@@ -81,27 +75,6 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        <div ref={infoRef} className={`services__info ${infoClass}`}>
-          <div className="services__info-content">
-            <h3>Modalidades de Atendimento</h3>
-            <div className="services__modalities">
-              <div className="services__modality">
-                <Building2 className="services__modality-icon" />
-                <div>
-                  <strong>Presencial</strong>
-                  <p>Atendimento na clínica com toda infraestrutura necessária</p>
-                </div>
-              </div>
-              <div className="services__modality">
-                <Monitor className="services__modality-icon" />
-                <div>
-                  <strong>Online</strong>
-                  <p>Sessões por videoconferência com total privacidade</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>

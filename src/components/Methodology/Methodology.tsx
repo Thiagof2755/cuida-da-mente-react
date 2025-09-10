@@ -54,32 +54,48 @@ const Methodology: React.FC = () => {
               <div className="methodology__step">
                 <div className="methodology__step-number">1</div>
                 <div className="methodology__step-content">
-                  <h4>Triagem Inicial</h4>
-                  <p>Primeira conversa para entender a necessidade e direcionar o melhor tratamento</p>
+                  <h4>Triagem</h4>
+                  <p>Triagem inicial para identificar necessidades e direcionar o melhor tratamento</p>
                 </div>
               </div>
               
               <div className="methodology__step">
                 <div className="methodology__step-number">2</div>
                 <div className="methodology__step-content">
-                  <h4>Avaliação</h4>
-                  <p>Processo detalhado com testes padronizados e entrevistas quando necessário</p>
+                  <h4>Entrevista Inicial</h4>
+                  <p>Coleta de informações detalhadas sobre história de vida do paciente</p>
                 </div>
               </div>
               
               <div className="methodology__step">
                 <div className="methodology__step-number">3</div>
                 <div className="methodology__step-content">
-                  <h4>Devolutiva</h4>
-                  <p>Apresentação dos resultados e discussão das recomendações</p>
+                  <h4>Testagem Padronizada</h4>
+                  <p>Aplicação de testes desenvolvidos, testados e validados para população brasileira</p>
                 </div>
               </div>
               
               <div className="methodology__step">
                 <div className="methodology__step-number">4</div>
                 <div className="methodology__step-content">
+                  <h4>Laudo</h4>
+                  <p>Elaboração de laudo a partir dos resultados coletados na entrevista, testagem e observação clínica</p>
+                </div>
+              </div>
+              
+              <div className="methodology__step">
+                <div className="methodology__step-number">5</div>
+                <div className="methodology__step-content">
+                  <h4>Devolutiva</h4>
+                  <p>Apresentação dos achados de modo simples, acolhedor e ético</p>
+                </div>
+              </div>
+              
+              <div className="methodology__step">
+                <div className="methodology__step-number">6</div>
+                <div className="methodology__step-content">
                   <h4>Acompanhamento</h4>
-                  <p>Sessões regulares para monitorar o progresso e ajustar o tratamento</p>
+                  <p>Foco em intervenção, suporte e monitoramento do progresso do paciente</p>
                 </div>
               </div>
             </div>
@@ -92,7 +108,6 @@ const Methodology: React.FC = () => {
                 <Shield className="methodology__ethics-icon" />
                 <div>
                   <strong>Confidencialidade Total</strong>
-                  <p>Todas as informações são protegidas pelo sigilo profissional</p>
                 </div>
               </div>
               
@@ -100,7 +115,6 @@ const Methodology: React.FC = () => {
                 <Scale className="methodology__ethics-icon" />
                 <div>
                   <strong>Código de Ética</strong>
-                  <p>Seguimos rigorosamente o Código de Ética Profissional do Psicólogo</p>
                 </div>
               </div>
               
@@ -108,7 +122,6 @@ const Methodology: React.FC = () => {
                 <Handshake className="methodology__ethics-icon" />
                 <div>
                   <strong>Consentimento Informado</strong>
-                  <p>Processo transparente com autorização dos responsáveis</p>
                 </div>
               </div>
             </div>

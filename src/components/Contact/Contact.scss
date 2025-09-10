@@ -1,4 +1,6 @@
+// Contact.scss
 @import '../../styles/globals.scss';
+
 
 .contact {
   background: linear-gradient(135deg, $color-gray-light 0%, $color-white 100%);
@@ -6,15 +8,19 @@
     padding: 4rem 1rem;
   }
 
+
   &__header {
     margin-bottom: 4rem;
 
+
   }
+
 
   &__title {
     color: $color-primary;
     margin-bottom: 1rem;
   }
+
 
   &__subtitle {
     color: $color-gray-dark;
@@ -23,11 +29,13 @@
     margin: 0 auto;
   }
 
+
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: stretch;
+
 
     @include mobile {
       grid-template-columns: 1fr;
@@ -35,11 +43,13 @@
     }
   }
 
+
   &__info {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
 
     h3 {
       color: $color-primary;
@@ -48,12 +58,14 @@
     }
   }
 
+
   &__info-items {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 0;
   }
+
 
   &__info-item {
     display: flex;
@@ -65,10 +77,12 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 
+
     &:hover {
       transform: translateY(-3px);
     }
   }
+
 
   &__info-icon {
     font-size: 2rem;
@@ -77,6 +91,7 @@
     margin-top: 0.25rem;
   }
 
+
   &__info-item strong {
     display: block;
     color: $color-primary;
@@ -84,12 +99,14 @@
     font-size: 1.1rem;
   }
 
+
   &__info-item p {
     color: $color-gray-dark;
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.5;
   }
+
 
   &__whatsapp {
     margin-top: 0;
@@ -99,11 +116,13 @@
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 
+
     h4 {
       color: $color-primary;
       margin-bottom: 0.75rem;
       font-size: 1.2rem;
     }
+
 
     p {
       color: $color-gray-dark;
@@ -112,16 +131,19 @@
     }
   }
 
+
   &__whatsapp-button {
     width: 100%;
     font-size: 1.1rem;
     padding: 1rem 1.5rem;
   }
 
+
   &__whatsapp-icon {
     margin-right: 0.5rem;
     font-size: 1.2rem;
   }
+
 
   &__animation-container {
     height: 100%;
@@ -129,10 +151,12 @@
     flex-direction: column;
     justify-content: flex-start;
 
+
     @include mobile {
       order: 1;
     }
   }
+
 
   &__animation {
     text-align: center;
@@ -141,30 +165,40 @@
     flex-direction: column;
     justify-content: flex-start;
 
+
     p {
       color: $color-gray-dark;
       font-size: 1.1rem;
       line-height: 1.5;
       font-weight: $font-weight-medium;
       margin-bottom: 2rem;
+      margin-top: 0;
     }
+
 
     .contact__lottie-container {
       margin-bottom: 2rem;
+      margin-top: 0;
     }
 
+
     .contact__whatsapp {
-      margin-top: 2.5rem;
       background: $color-white;
       border-radius: 16px;
       padding: 2.5rem;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+      // Novas regras para alinhamento e posicionamento
+      max-width: 500px; // Limita a largura para alinhar com a animação Lottie
+      margin: 0 auto 2.5rem auto; // Centraliza horizontalmente e adiciona margem inferior
+
 
       h4 {
         color: $color-primary;
         margin-bottom: 1rem;
         font-size: 1.2rem;
       }
+
 
       p {
         color: $color-gray-dark;
@@ -174,12 +208,14 @@
     }
   }
 
+
   &__lottie-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    
+
+
     @include mobile {
       max-width: 100%;
     }

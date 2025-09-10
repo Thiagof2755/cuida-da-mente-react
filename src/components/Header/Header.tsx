@@ -82,7 +82,7 @@ const Header: React.FC = () => {
   const handleAgendarConsulta = () => {
     setIsMobileMenuOpen(false);
     const message = encodeURIComponent('Olá! Gostaria de agendar uma consulta.');
-    window.open(`https://wa.me/11982109964?text=${message}`, '_blank');
+    window.open(`https://wa.me/11965486611?text=${message}`, '_blank');
   };
 
   return (

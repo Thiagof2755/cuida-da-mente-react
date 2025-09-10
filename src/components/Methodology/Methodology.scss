@@ -70,29 +70,34 @@
   &__steps {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.2rem;
   }
 
   &__step {
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
-    border-radius: 16px;
-    border-left: 4px solid #1BAABF;
+    border-radius: 12px;
+    border-left: 3px solid #1BAABF;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 
     &:hover {
-      transform: translateX(5px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      transform: translateX(3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    @include mobile {
+      padding: 1.2rem 1.5rem;
+      gap: 1.2rem;
     }
   }
 
   &__step-number {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     background: linear-gradient(135deg, #1BAABF, #2FA865);
     color: $color-white;
     border-radius: 50%;
@@ -100,24 +105,30 @@
     align-items: center;
     justify-content: center;
     font-weight: $font-weight-bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(27, 170, 191, 0.3);
+    box-shadow: 0 3px 8px rgba(27, 170, 191, 0.3);
+
+    @include mobile {
+      width: 36px;
+      height: 36px;
+      font-size: 1.1rem;
+    }
   }
 
   &__step-content {
     h4 {
       color: #03383A;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
       font-weight: $font-weight-semibold;
     }
 
     p {
       color: #0F6B82;
       margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.5;
+      font-size: 0.9rem;
+      line-height: 1.4;
     }
   }
 

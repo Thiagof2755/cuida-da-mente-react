@@ -43,19 +43,20 @@ const About: React.FC = () => {
       text: 'Psicologia Clínica e Neuropsicologia',
     },
     intro: [
-      `Com mais de uma década de experiência em psicologia clínica e neuropsicologia, a Drª Ivanice Barros é especialista no atendimento de crianças, adolescentes e adultos. Formada pela USP e com especialização no Hospital das Clínicas, desenvolveu uma abordagem integrativa que combina técnicas modernas com embasamento científico sólido.`,
-      `Seu trabalho é focado no acolhimento, diagnóstico preciso e desenvolvimento de planos de tratamento individualizados, sempre considerando as particularidades de cada paciente e suas famílias.`,
+      `Sou psicóloga (CRP 06/179065), com experiência no cuidado de crianças, adolescentes e jovens adultos. Sou pós-graduada em Neuropsicologia pelo Hospital das Clínicas – Faculdade de Medicina da USP (FMUSP), o que me permite compreender os aspectos cognitivos e emocionais que influenciam o desenvolvimento e o comportamento.`,
+      `Realizo avaliações neuropsicológicas para investigar padrões cognitivos e emocionais, elaborando laudos claros, objetivos e fundamentados cientificamente, que orientam famílias e profissionais na definição das melhores estratégias de intervenção.`,
+      `Além disso, atuo na psicoterapia baseada na Terapia Cognitivo-Comportamental (TCC), auxiliando meus pacientes a ressignificar pensamentos e emoções, promovendo mudanças reais e duradouras. Acredito no potencial único de cada pessoa e no poder de construir caminhos mais leves e equilibrados, com acolhimento e propósito.`,
     ],
     topics: [
       {
         icon: 'CheckCircle',
         title: 'Psicologia Clínica:',
-        description: 'Atendimento personalizado para crianças, adolescentes e adultos',
+        description: 'Atendimento personalizado para crianças, adolescentes e jovens adultos',
       },
       {
         icon: 'CheckCircle',
         title: 'Avaliação Neuropsicológica:',
-        description: 'Diagnóstico preciso de TEA, TDAH e outros transtornos',
+        description: 'Diagnósticos de TEA, TDAH, Aprendizagem e outros',
       },
       {
         icon: 'CheckCircle',
@@ -100,7 +101,7 @@ const About: React.FC = () => {
                 <span>{aboutData.badge.text}</span>
               </div>
             )}
-            <h2 className="about__title">Sobre a {psychologistName}</h2>
+            <h2 className="about__title">Sobre {psychologistName}</h2>
           </div>
 
           {/* Conteúdo Principal */}

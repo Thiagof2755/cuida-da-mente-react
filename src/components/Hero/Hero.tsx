@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, MapPin, Monitor } from 'lucide-react';
 import { clinicInfo } from '../../utils/data';
 import LogoBranco from '../../assets/Logo.png';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
@@ -22,6 +22,12 @@ const Hero: React.FC = () => {
     animation: 'slideInUp', 
     duration: 'fast',
     easing: 'default'
+  });
+
+  const { ref: modalityRef, animationClass: modalityClass } = useScrollReveal({ 
+    animation: 'fadeInUp', 
+    duration: 'normal',
+    easing: 'bounce'
   });
 
   const handleWhatsAppClick = () => {
@@ -53,20 +59,29 @@ const Hero: React.FC = () => {
           <div className="hero__text">
             <h1 ref={titleRef} className={`hero__title ${titleClass}`}>
               Psicologia e Neuropsicologia para{' '}
-              <span className="hero__highlight">crianças, adolescentes e adultos</span>
+              <span className="hero__highlight">crianças, adolescentes e jovens adultos</span>
             </h1>
             
-            <div ref={ctaRef} className={`hero__cta ${ctaClass}`}>
-              <button 
-                className="btn btn--primary hero__cta-button"
-                onClick={handleWhatsAppClick}
-              >
-                <MessageCircle className="hero__cta-icon" />
-                Fale no WhatsApp
-              </button>
+          </div>
+
+          {/* Modalidade Mini-Cards - Canto inferior esquerdo */}
+ 
+        </div>
+        <div ref={modalityRef} className={`hero__modalities ${modalityClass}`}>
+            <div className="hero__modality-card hero__modality-card--presencial" onClick={handleWhatsAppClick}>
+              <div className="hero__modality-icon">
+                <MapPin size={18} />
+              </div>
+              <span className="hero__modality-label">Presencial</span>
+            </div>
+            
+            <div className="hero__modality-card hero__modality-card--online" onClick={handleWhatsAppClick}>
+              <div className="hero__modality-icon">
+                <Monitor size={18} />
+              </div>
+              <span className="hero__modality-label">Online</span>
             </div>
           </div>
-        </div>
       </div>
     </section>
   );
