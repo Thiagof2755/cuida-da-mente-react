@@ -1,0 +1,602 @@
+@import '../../styles/globals.scss';
+
+.testimonials {
+  background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 15% 25%, rgba(37, 194, 184, 0.04) 0%, transparent 60%),
+      radial-gradient(circle at 85% 75%, rgba(236, 75, 145, 0.03) 0%, transparent 60%),
+      radial-gradient(circle at 50% 50%, rgba(47, 168, 101, 0.02) 0%, transparent 70%),
+      radial-gradient(circle at 25% 75%, rgba(247, 224, 76, 0.02) 0%, transparent 50%),
+      linear-gradient(45deg, rgba(37, 194, 184, 0.01) 0%, transparent 50%);
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2325C2B8' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    z-index: 0;
+    opacity: 0.3;
+  }
+
+  &__header {
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__title {
+    color: $color-primary;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    background: linear-gradient(135deg, #03383A 0%, #0F6B82 50%, #25C2B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, $color-accent-cyan, transparent);
+      border-radius: 2px;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+
+  &__subtitle {
+    color: $color-gray-dark;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+
+    @include mobile {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__carousel {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    z-index: 1;
+    padding: 2rem 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 
+      0 25px 50px rgba(3, 56, 58, 0.08),
+      0 10px 20px rgba(15, 107, 130, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    min-height: 480px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 251, 0.8) 100%);
+    border: 1px solid rgba(37, 194, 184, 0.1);
+    backdrop-filter: blur(10px);
+
+    @include mobile {
+      min-height: 420px;
+      border-radius: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, 
+        rgba(37, 194, 184, 0.02) 0%, 
+        rgba(236, 75, 145, 0.01) 30%, 
+        rgba(47, 168, 101, 0.01) 70%, 
+        rgba(247, 224, 76, 0.02) 100%);
+      border-radius: 24px;
+      z-index: 0;
+    }
+  }
+
+  &__track {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__slide {
+    width: 33.333333%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    position: relative;
+    
+    &--active {
+      .testimonials__card {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 
+          0 30px 60px rgba(3, 56, 58, 0.15),
+          0 15px 30px rgba(15, 107, 130, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        border-color: rgba(37, 194, 184, 0.3);
+        
+        &::before {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        
+      }
+    }
+
+    @include mobile {
+      padding: 1rem 0.75rem;
+    }
+  }
+
+  &__card {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.95) 0%, 
+      rgba(248, 250, 251, 0.9) 100%);
+    border-radius: 24px;
+    padding: 3.5rem 3rem;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid rgba(37, 194, 184, 0.08);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    will-change: transform, box-shadow;
+    box-sizing: border-box;
+    backdrop-filter: blur(20px);
+    box-shadow: 
+      0 20px 40px rgba(3, 56, 58, 0.06),
+      0 8px 16px rgba(15, 107, 130, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, 
+        rgba(37, 194, 184, 0.03) 0%, 
+        rgba(236, 75, 145, 0.02) 30%, 
+        rgba(47, 168, 101, 0.02) 70%, 
+        rgba(247, 224, 76, 0.03) 100%);
+      border-radius: 24px;
+      opacity: 0;
+      transition: all 0.6s ease;
+      z-index: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, 
+        $color-accent-cyan 0%, 
+        rgba(236, 75, 145, 0.8) 25%,
+        rgba(247, 224, 76, 0.8) 50%,
+        rgba(47, 168, 101, 0.8) 75%,
+        $color-accent-cyan 100%);
+      transform: scaleX(0);
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform-origin: left;
+      border-radius: 24px 24px 0 0;
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 
+        0 35px 70px rgba(3, 56, 58, 0.12),
+        0 15px 30px rgba(15, 107, 130, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      border-color: rgba(37, 194, 184, 0.2);
+
+      &::before {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+
+      &::after {
+        transform: scaleX(1);
+      }
+
+    }
+
+    @include mobile {
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+    }
+  }
+
+
+  &__text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: $color-gray-dark;
+    font-style: italic;
+    margin: 4rem 0 0 0;
+    position: relative;
+    quotes: none;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0.01em;
+    z-index: 2;
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -1rem;
+      left: -0.5rem;
+      font-size: 4rem;
+      color: rgba(37, 194, 184, 0.1);
+      font-family: serif;
+      line-height: 1;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "\201D";
+      position: absolute;
+      bottom: -2rem;
+      right: -0.5rem;
+      font-size: 4rem;
+      color: rgba(37, 194, 184, 0.1);
+      font-family: serif;
+      line-height: 1;
+      z-index: -1;
+    }
+
+    @include mobile {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 3.5rem 0 0 0;
+      
+      &::before,
+      &::after {
+        font-size: 3rem;
+      }
+    }
+
+    @include desktop {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__author {
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+    color: $color-accent-cyan;
+    font-style: normal;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 2;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, 
+      rgba(37, 194, 184, 0.1) 0%, 
+      rgba(236, 75, 145, 0.05) 100%);
+    border-radius: 15px;
+    border: 1px solid rgba(37, 194, 184, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+
+    
+
+    @include mobile {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% + 8rem);
+    left: -4rem;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 3;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__nav-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.95) 0%, 
+      rgba(248, 250, 251, 0.9) 100%);
+    border: 2px solid rgba(37, 194, 184, 0.15);
+    color: $color-accent-cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: all;
+    box-shadow: 
+      0 8px 20px rgba(3, 56, 58, 0.08),
+      0 4px 10px rgba(15, 107, 130, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $color-accent-cyan ;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: -1;
+    }
+
+    &:hover {
+      background: $color-accent-cyan ;
+      color: $color-white;
+      transform: scale(1.15) translateY(-2px);
+      box-shadow: 
+        0 15px 35px rgba(37, 194, 184, 0.25),
+        0 8px 20px rgba(15, 107, 130, 0.15);
+      border-color: transparent;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      transform: scale(1.05) translateY(-1px);
+    }
+
+    &:focus {
+      outline: 3px solid rgba(37, 194, 184, 0.3);
+      outline-offset: 3px;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+      filter: drop-shadow(0 2px 4px rgba(37, 194, 184, 0.2));
+      transition: all 0.3s ease;
+    }
+
+    &:hover svg {
+      filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.3));
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 2;
+
+    @include mobile {
+      margin-top: 2rem;
+      gap: 0.75rem;
+    }
+  }
+
+  &__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid rgba(37, 194, 184, 0.2);
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(3, 56, 58, 0.1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      background: linear-gradient(135deg, 
+        $color-accent-cyan 0%,
+        rgba(236, 75, 145, 0.8) 25%,
+        rgba(247, 224, 76, 0.8) 50%,
+        rgba(47, 168, 101, 0.8) 75%,
+        $color-accent-cyan 100%);
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      background: rgba(37, 194, 184, 0.1);
+      border-color: rgba(37, 194, 184, 0.4);
+      transform: scale(1.2);
+      box-shadow: 0 4px 12px rgba(37, 194, 184, 0.2);
+
+      &::before {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+
+    &:focus {
+      outline: 3px solid rgba(37, 194, 184, 0.3);
+      outline-offset: 3px;
+    }
+
+    &--active {
+      background: linear-gradient(135deg, 
+        rgba(37, 194, 184, 0.15) 0%, 
+        rgba(236, 75, 145, 0.1) 25%,
+        rgba(247, 224, 76, 0.1) 50%,
+        rgba(47, 168, 101, 0.1) 75%,
+        rgba(37, 194, 184, 0.15) 100%);
+      border-color: $color-accent-cyan;
+      transform: scale(1.3);
+      box-shadow: 
+        0 6px 15px rgba(37, 194, 184, 0.25),
+        0 0 0 4px rgba(37, 194, 184, 0.1);
+
+      &::before {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+        background: linear-gradient(135deg, 
+          $color-accent-cyan 0%,
+          rgba(236, 75, 145, 0.8) 25%,
+          rgba(247, 224, 76, 0.8) 50%,
+          rgba(47, 168, 101, 0.8) 75%,
+          $color-accent-cyan 100%);
+      }
+
+      &:hover {
+        transform: scale(1.4);
+      }
+    }
+
+    @include mobile {
+      width: 12px;
+      height: 12px;
+      
+      &::before {
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+}
+
+// Performance optimizations
+.testimonials__track {
+  transform: translate3d(0, 0, 0);
+}
+
+// Smooth scrolling behavior
+@media (prefers-reduced-motion: reduce) {
+  .testimonials__track,
+  .testimonials__card,
+  .testimonials__nav-btn,
+  .testimonials__dot {
+    transition: none;
+  }
+}
+
+// Animações de entrada personalizadas
+@keyframes testimonialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes testimonialFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Aplicar animações aos elementos
+.testimonials__card {
+  animation: testimonialFadeIn 0.8s ease-out;
+}
+
+.testimonials__slide {
+  animation: testimonialSlideIn 0.6s ease-out;
+}
+
+// Responsividade adicional para telas muito pequenas
+@media (max-width: 480px) {
+  .testimonials {
+    &__card {
+      padding: 2rem 1.5rem;
+    }
+
+    &__text {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+
+    &__author {
+      font-size: 0.95rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+}

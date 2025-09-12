@@ -3,6 +3,7 @@ import Hero from '../Hero/Hero';
 import About from '../About/About';
 import Services from '../Services/Services';
 import Methodology from '../Methodology/Methodology';
+import Testimonials from '../Testimonials/Testimonials';
 import Contact from '../Contact/Contact';
 import './Home.scss';
 
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
       <About />
       <Services />
       <Methodology />
+      <Testimonials />
       <Contact />
     </>
   );

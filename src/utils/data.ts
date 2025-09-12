@@ -5,6 +5,7 @@ export const navigationItems: NavItem[] = [
     { id: 'about', label: 'Sobre', href: '#about' },
     { id: 'services', label: 'Serviços', href: '#services' },
     { id: 'methodology', label: 'Metodologia', href: '#methodology' },
+    { id: 'testimonials', label: 'Depoimentos', href: '#testimonials' },
     { id: 'contact', label: 'Contato', href: '#contact' }
 ];
 
