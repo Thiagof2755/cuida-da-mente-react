@@ -29,17 +29,17 @@ const Testimonials: React.FC = () => {
     {
       id: 1,
       text: "Antes de começar a terapia me encontrava tendo crises de ansiedade recorrente, cada vez com espaço de tempo menor. Até que em uma semana tive mais de uma crise e resolvi procurar ajuda, antes que eu ficasse pior. Sentia muito palpitação no coração, falta de ar, tremia quando ficava nervosa/ansiosa, e quando crise ficava muito forte eram todas essas sensações de uma vez só. Após as sessões de terapia, consegui controlar mais as minhas emoções, entender as minhas prioridades, para assim, conseguir ter dias mais tranquilos e calmos. A cada sessão que passava eu olhava mais para mim, para o que sinto. Entendi que não posso controlar o que está ao meu redor, e sim, o que eu sinto.",
-      author: "Paciente"
+      author: "Y. S. Rodrigues"
     },
     {
       id: 2,
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      author: "Paciente"
+      text: "Ótima profissional! Estar com ela é sentir respeito pelo ser que você é. Ela nos transmite confiança, segurança. Através de suas técnicas nos dá suporte para superar nossos temores, bloqueios, desenvolvendo nossa capacidade de pensar, agir, refletir, se questionar. Em cada sessão, saio mais leve, bem melhor!",
+      author: "S. Prado"
     },
     {
       id: 3,
-      text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.",
-      author: "Paciente"
+      text: "Sempre atenciosa, sensata, houve com atenção e sabe nos repassar oq devemos pensar, sobre o equilíbrio da vida! Excelente profissional. Me ajudou bastante em fases da vida.",
+      author: "S. S. Teixeira"
     }
   ];
 

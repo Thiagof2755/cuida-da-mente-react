@@ -91,6 +91,19 @@
     line-height: 1.4;
   }
 
+  &__social-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-accent-cyan;
+      text-decoration: underline;
+    }
+  }
+
   &__services-list {
     list-style: none;
     padding: 0;

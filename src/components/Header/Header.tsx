@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import { navigationItems } from '../../utils/data';
 import logoPreto from '../../assets/Logo.png';
 import logoBranco from '../../assets/Logo.png';
@@ -85,6 +85,11 @@ const Header: React.FC = () => {
     window.open(`https://wa.me/11965486611?text=${message}`, '_blank');
   };
 
+  const handleInstagramClick = () => {
+    setIsMobileMenuOpen(false);
+    window.open('https://www.instagram.com/ivanice.psi/', '_blank');
+  };
+
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : 'header--scrolled'}`}>
       <div className="container">
@@ -129,6 +134,14 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="header__actions">
+            {/* <button
+              className="header__instagram-btn"
+              onClick={handleInstagramClick}
+              aria-label="Seguir no Instagram"
+            >
+              <Instagram className="header__instagram-icon" />
+            </button>
+             */}
             <button
               ref={toggleButtonRef}
               className={`header__mobile-toggle ${isMobileMenuOpen ? 'header__mobile-toggle--active' : ''}`}

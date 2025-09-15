@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Mail, Phone } from 'lucide-react';
+import { MapPin, Mail, Phone, Instagram } from 'lucide-react';
 import { clinicInfo } from '../../utils/data';
 import './Footer.scss';
 
@@ -35,6 +35,17 @@ const Footer: React.FC = () => {
               <div className="footer__contact-item">
                 <Mail className="footer__contact-icon" />
                 <p>{clinicInfo.email}</p>
+              </div>
+              <div className="footer__contact-item">
+                <Instagram className="footer__contact-icon" />
+                <a 
+                  href="https://www.instagram.com/ivanice.psi/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="footer__social-link"
+                >
+                  @ivanice.psi
+                </a>
               </div>
             </div>
 

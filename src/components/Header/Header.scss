@@ -250,6 +250,44 @@
     z-index: 1001;
   }
 
+  &__instagram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgba(3, 56, 58, 0.3);
+    color: $color-primary;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    .header--scrolled & {
+      border-color: rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+    
+    &:hover {
+      background: rgba(3, 56, 58, 0.1);
+      transform: translateY(-1px);
+      
+      .header--scrolled & {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__instagram-icon {
+    width: 20px;
+    height: 20px;
+  }
+
   &__cta-desktop {
     padding: $spacing-sm $spacing-lg;
     background: linear-gradient(135deg, #03383A, #0F6B82);
