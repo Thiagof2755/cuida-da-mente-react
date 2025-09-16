@@ -54,8 +54,6 @@ const Footer: React.FC = () => {
               <ul className="footer__services-list">
                 <li>Avaliação Neuropsicológica</li>
                 <li>Psicoterapia Individual</li>
-                <li>Orientação para Pais</li>
-                <li>Atendimento Online</li>
               </ul>
             </div>
 
