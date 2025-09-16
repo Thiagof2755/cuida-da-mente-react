@@ -1,6 +1,6 @@
 # Cuida da Mente - Site Institucional
 
-Site institucional da clínica **Cuida da Mente**, especializada em Psicologia e Neuropsicologia para crianças, adolescentes e adultos.
+Site institucional da clínica **Cuida da Mente**, especializada em Psicologia e Neuropsicologia para crianças, adolescentes e jovens adultos.
 
 ## 🏥 Sobre a Clínica
 

@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <div className="footer__brand">
               <h3 className="footer__logo">{clinicInfo.name}</h3>
               <p className="footer__tagline">
-                Psicologia e Neuropsicologia para crianças, adolescentes e adultos
+                Psicologia e Neuropsicologia para crianças, adolescentes e jovens adultos
               </p>
               <p className="footer__description">
                 Atendimento especializado com base em evidências científicas, 

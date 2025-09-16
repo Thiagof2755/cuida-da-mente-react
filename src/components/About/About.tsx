@@ -48,11 +48,7 @@ const About: React.FC = () => {
       `Além disso, atuo na psicoterapia baseada na Terapia Cognitivo-Comportamental (TCC), auxiliando meus pacientes a ressignificar pensamentos e emoções, promovendo mudanças reais e duradouras. Acredito no potencial único de cada pessoa e no poder de construir caminhos mais leves e equilibrados, com acolhimento e propósito.`,
     ],
     topics: [
-      {
-        icon: 'CheckCircle',
-        title: 'Psicologia Clínica:',
-        description: 'Atendimento personalizado para crianças, adolescentes e jovens adultos',
-      },
+
       {
         icon: 'CheckCircle',
         title: 'Avaliação Neuropsicológica:',
@@ -60,14 +56,9 @@ const About: React.FC = () => {
       },
       {
         icon: 'CheckCircle',
-        title: 'Orientação Familiar:',
-        description: 'Suporte e estratégias para pais e cuidadores',
-      },
-      {
-        icon: 'CheckCircle',
-        title: 'Intervenções Terapêuticas:',
-        description: 'Baseadas em evidências científicas',
-      },
+        title: 'Psicoterapia Individual',
+        description: 'Atendimento personalizado para crianças, adolescentes e jovens adultos'
+      }
     ],
     specialtiesSummary: `Utiliza abordagens integrativas que combinam técnicas da Terapia Cognitivo-Comportamental (TCC), Psicologia Positiva e intervenções neuropsicológicas, sempre adaptadas às necessidades específicas de cada paciente.`,
     specialtyItems: [
