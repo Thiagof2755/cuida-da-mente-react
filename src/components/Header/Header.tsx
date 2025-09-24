@@ -90,6 +90,14 @@ const Header: React.FC = () => {
     window.open('https://www.instagram.com/ivanice.psi/', '_blank');
   };
 
+  const handleLogoClick = () => {
+    setIsMobileMenuOpen(false);
+    const heroElement = document.getElementById('home');
+    if (heroElement) {
+      heroElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : 'header--scrolled'}`}>
       <div className="container">
@@ -99,6 +107,8 @@ const Header: React.FC = () => {
               src={isScrolled ? logoBranco : logoPreto} 
               alt="Cuida da Mente - Psicologia e Neuropsicologia" 
               className="header__logo-img"
+              onClick={handleLogoClick}
+              style={{ cursor: 'pointer' }}
             />
           </div>
 
